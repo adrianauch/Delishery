@@ -4,10 +4,12 @@ var parsedIngredientList = [];
 var parsedIngredientQuantity = [];
 var parsedDrinkList = [];
 var parsedDrinkQuantity = [];
+var drinkSelection;
+var foodSelection;
 
 //API Fetch URLs
 var drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
-var foodURL = "https://www.themealdb.com/api/json/v1/1/random.php";
+var foodURL = "https://www.themealdb.com/api/json/v1/1/random.php?c=Seafood";
 
 // This fn sets food ingredients into an array (cleaner that the object's setup), parses out nulls, and console logs the ingredients with quantity.
 // Once html is finished, ingredients will be appended to doc instead of console logging.
@@ -65,18 +67,21 @@ function foodRecipe() {
         data.meals[0].strMeasure20,
       ];
       parsedIngredientQuantity = rawIngredientQuantity.filter((e) => e);
+      // If user clicks refresh button, will remove the previous recipe's ingredients
+      $("#biteSection").find("li").remove();
 
-      console.log(data.meals[0].strMeal);
+      $("#biteSection").find("h5").text(data.meals[0].strMeal);
       for (var i = 0; i < parsedIngredientList.length; i++) {
-        console.log(
+        var ingredientList = $("#biteSection").find("ul");
+        var ingredientItem = $("<li></li>").text(
           parsedIngredientList[i] + " ------- " + parsedIngredientQuantity[i]
         );
+        ingredientList.append(ingredientItem);
       }
-      console.log(data.meals[0].strInstructions);
+      $("#biteSection").find("p").text(data.meals[0].strInstructions);
+      console.log(data.meals[0].strCategory);
     });
 }
-
-foodRecipe();
 
 // This fn sets drink ingredients into an array (cleaner that the object's setup), parses out nulls, and console logs the ingredients with quantity.
 // Once html is finished, ingredients will be appended to doc instead of console logging.
@@ -135,12 +140,26 @@ function drinkRecipe() {
       ];
       parsedDrinkQuantity = rawDrinkQuantity.filter((e) => e);
 
-      console.log(data.drinks[0].strDrink);
+      // If user clicks refresh button, will remove the previous recipe's ingredients
+      $("#bevieSection").find("li").remove();
+
+      $("#bevieSection").find("h5").text(data.drinks[0].strDrink);
       for (var i = 0; i < parsedDrinkList.length; i++) {
-        console.log(parsedDrinkList[i] + " ------- " + parsedDrinkQuantity[i]);
+        var ingredientList = $("#bevieSection").find("ul");
+        var ingredientItem = $("<li></li>").text(
+          parsedDrinkList[i] + " ------- " + parsedDrinkQuantity[i]
+        );
+        ingredientList.append(ingredientItem);
       }
-      console.log(data.drinks[0].strInstructions);
+      $("#bevieSection").find("p").text(data.drinks[0].strInstructions);
+      console.log(data.drinks[0].strCategory);
     });
 }
 
-drinkRecipe();
+$("#refreshFood").on("click", function () {
+  foodRecipe();
+});
+
+$("#refreshDrink").on("click", function () {
+  drinkRecipe();
+});

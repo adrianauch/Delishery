@@ -7,26 +7,43 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Delishery B&B</title>
   </head>
-  <body>
+  <body onload="foodRecipe(); drinkRecipe();">
+    <!-- Contains all elements to display for the food -->
     <div class="questionArea">
       <a href="./index.html"
         ><img
           src="file:///C:/Users/bcb35/Downloads/logoipsum-logo-13.svg"
           alt="Delishery Logo"
       /></a>
-      <!-- This header will cycle between "Let's start with some drinks" and "What will you be cooking for?" or something similar to prompt-->
-      <header>Let's start with some drinks</header>
+      <header>Bite</header>
     </div>
 
+    <section id="biteSection">
+      <h5>Food Reciple Name</h5>
+      <h6>Ingredients</h6>
+      <ul></ul>
+      <h6>Directions</h6>
+      <p></p>
+      <button id="refreshFood">Bring me something else</button>
+    </section>
+
+    <!-- Contains all elements to display for the beverage -->
     <div class="questionArea">
       <a href="./index.html"
         ><img
           src="file:///C:/Users/bcb35/Downloads/logoipsum-logo-13.svg"
           alt="Delishery Logo"
       /></a>
-      <!-- This header will cycle between "Let's start with some drinks" and "What will you be cooking for?" or something similar to prompt-->
-      <header>Let's start with some drinks</header>
+      <header>Bevie</header>
     </div>
+    <section id="bevieSection">
+      <h5>Drink Reciple Name</h5>
+      <h6>Ingredients</h6>
+      <ul></ul>
+      <h6>Directions</h6>
+      <p></p>
+      <button id="refreshDrink">Bring me something else</button>
+    </section>
 
     <!-- jQuery script path-->
     <script
