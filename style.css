@@ -1,0 +1,19 @@
+:root {
+  --oldLavendar: rgb(131, 111, 123);
+}
+
+.roundedBtn {
+  width: 17vw;
+  height: 17vw;
+  background-color: var(--oldLavendar);
+  border-radius: 50%;
+  outline: none;
+}
+
+.questionArea {
+  display: block;
+}
+
+.questionArea header {
+  display: inline;
+}
