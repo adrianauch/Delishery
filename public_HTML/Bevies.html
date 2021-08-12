@@ -27,130 +27,84 @@
       crossorigin="anonymous"
     />
   </head>
-  <header>
-    <nav class="navbar navbar-dark bg-black py-6">
-      <div class="container-fluid w-100 justify-content-center">
-        <h1 class="navbar-brand fw-bolder fst-italic">
-          Bevies served by
-          <a class="navbar-brand" href="../index.html"> Delishery </a>
-        </h1>
-      </div>
-      <div class="container-fluid w-100 justify-content-center"></div>
-    </nav>
-  </header>
   <body class="bg-black">
-    <div class="container-fluid bg-secondary" id="main-content">
-      <div class="container w-75 bg-dark">
+    <header>
+      <nav class="navbar navbar-dark bg-black py-6">
+        <div class="container-fluid justify-content-center">
+          <h1 class="navbar-brand fw-bolder fst-italic">
+            Bevies served by
+            <a class="navbar-brand" href="../index.html"> Delishery </a>
+          </h1>
+        </div>
+        <div class="container-fluid justify-content-center"></div>
+      </nav>
+    </header>
+    <div class="container-fluid bg-secondary" style="height: 100vh;" id="main-content">
+      <div class="container bg-dark" >
         <h2 class="text-center text-light" id="drink-name">
           Lets start with a drink!
         </h2>
         <h3 class="text-center text-light">It's 5 '0 clock somewhere!</h3>
       </div>
+      <div class="container bg-secondary">
+        <div class="row justify-content-between bg-secondary d-flex" >
+          <div class="col-5 bg-dark text-light text-center px-1" style="width: 48%; height: 30vh;" id="cocktail">Cocktail</div>
+          <div class="col-5 bg-dark text-light text-center px-1" style="width: 48%; height: 30vh;" id="special-drinks">
+            Punch/Party Drinks
+          </div>
+        </div>
+        <div class="row justify-content-between bg-secondary d-flex">
+          <div class="col-5 bg-dark text-light text-center px-1" style="width: 48%; height: 30vh;" id='basic-drinks'>Basic</div>
+          <div class="col-5 bg-dark text-light text-center px-1" style="width: 48%; height: 30vh;" id="shots">Shots</div>
+        </div>
+      </div>
     </div>
 
+    <footer
+      class="fixed-bottom bg-black d-flex flex-row justify-content-around"
+    >
+      <div class="card bg-dark" style="width: 22%">
+        <a
+          class="github-button link-secondary"
+          href="https://github.com/Matthew-Hazelwood"
+          data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Follow @Matthew-Hazelwood on GitHub"
+          ><h3 class="text-center">
+            <i class="fab fa-github">Follow Cav3man</i>
+          </h3></a
+        >
+
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="cav3mancomputers" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/cav3mancomputers?trk=profile-badge"></a></div>
+        <div class="card bg-dark" style="width: 22%;">
+        <a
+          class="github-button link-secondary"
+          href="https://github.com/adrianauch"
+          data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Follow @adrianauch on GitHub"
+          ><h3 class="text-center">
+            <i class="fab fa-github">Follow Adrian</i>
+          </h3></a
+        >
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="aauchterlonie" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/aauchterlonie?trk=profile-badge"></a></div>
+        </div>
+              
+            
+        </div>
+      </div>
+     
+    </footer>
     <!-- The following body commands are reserved for script calls  -->
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"
       integrity="sha512-NWNl2ZLgVBoi6lTcMsHgCQyrZVFnSmcaa3zRv0L3aoGXshwoxkGs3esa9zwQHsChGRL4aLDnJjJJeP6MjPX46Q=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script
-      src="https://platform.linkedin.com/badges/js/profile.js"
-      async
-      defer
-      type="text/javascript"
-    ></script>
+    
   </body>
-  <footer class="fixed-bottom bg-secondary">
-    <button class="btn btn-secondary">
-      <a
-        class="github-button link-dark"
-        href="https://github.com/adrianauch"
-        data-color-scheme="no-preference: dark; light: dark; dark: dark;"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Follow @adrianauch on GitHub"
-        ><h3 class="text-center">
-          <i class="fab fa-github">Follow Adrian</i>
-        </h3></a
-      >
-
-      <div
-        class="badge-base LI-profile-badge"
-        data-locale="en_US"
-        data-size="medium"
-        data-theme="dark"
-        data-type="HORIZONTAL"
-        data-vanity="aauchterlonie"
-        data-version="v1"
-      ></div>
-    </button>
-    <button class="btn btn-secondary">
-      <a
-        class="github-button link-dark"
-        href="https://github.com/bcbridges"
-        data-color-scheme="no-preference: dark; light: dark; dark: dark;"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Follow @bcbridges on GitHub"
-        ><h3 class="text-center">
-          <i class="fab fa-github">Follow Brice</i>
-        </h3></a
-      >
-      <div
-        class="badge-base LI-profile-badge"
-        data-locale="en_US"
-        data-size="medium"
-        data-theme="dark"
-        data-type="HORIZONTAL"
-        data-vanity="brice-bridges"
-        data-version="v1"
-      ></div>
-    </button>
-    <button class="btn btn-secondary">
-      <a
-        class="github-button link-dark"
-        href="https://github.com/BrockAtwood"
-        data-color-scheme="no-preference: dark; light: dark; dark: dark;"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Follow @BrockAtwood on GitHub"
-        ><h3 class="text-center">
-          <i class="fab fa-github">Follow Brock</i>
-        </h3></a
-      >
-      <div
-        class="badge-base LI-profile-badge"
-        data-locale="en_US"
-        data-size="medium"
-        data-theme="dark"
-        data-type="HORIZONTAL"
-        data-vanity="brock-atwood-55135210"
-        data-version="v1"
-      ></div>
-    </button>
-    <button class="btn btn-secondary">
-      <a
-        class="github-button link-dark"
-        href="https://github.com/Matthew-Hazelwood"
-        data-color-scheme="no-preference: dark; light: dark; dark: dark;"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Follow @Matthew-Hazelwood on GitHub"
-        ><h3 class="text-center">
-          <i class="fab fa-github">Follow Cav3man</i>
-        </h3></a
-      >
-      <div
-        class="badge-base LI-profile-badge"
-        data-locale="en_US"
-        data-size="medium"
-        data-theme="dark"
-        data-type="HORIZONTAL"
-        data-vanity="cav3mancomputers"
-        data-version="v1"
-      ></div>
-    </button>
-  </footer>
 </html>
