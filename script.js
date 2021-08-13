@@ -6,6 +6,8 @@ var parsedDrinkList = [];
 var parsedDrinkQuantity = [];
 var catSelection = {};
 var DrinkSelection = {};
+var FoodCatBtn = document.querySelector("#parent-food");
+var DrinkSelcBtn = document.querySelector("#parent-drink");
 
 //API Fetch URLs
 var drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
@@ -174,9 +176,13 @@ function recipeCat(ID) {
     });
 }
 
-catergories("Seafood");
+catergories(catSelection);
 
-//event listener we will need to use value attribute on button as the argument of the function. event.target.value make sure that spelling and cap and spacing matches exactly from API. Event delegation- listener to parent.
+//event listener for food category
+FoodCatBtn.addEventListener("Click", function (event) {
+  var foodPick = event.target;
+  foodPick = catSelection;
+});
 
 ///cocktail selector
 function TypeofAlc(userDrinkSelection) {
@@ -205,4 +211,10 @@ function RecipeAlc(ID) {
     });
 }
 
-TypeofAlc("Gin");
+TypeofAlc();
+
+// Event Listner:
+DrinkSelcBtn.addEventListener("Click", function (event) {
+  var DrinkPick = event.target;
+  DrinkPick = DrinkSelection;
+});
