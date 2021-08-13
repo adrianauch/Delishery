@@ -4,6 +4,10 @@ var parsedIngredientList = [];
 var parsedIngredientQuantity = [];
 var parsedDrinkList = [];
 var parsedDrinkQuantity = [];
+var catSelection = {};
+var DrinkSelection = {};
+var FoodCatBtn = document.querySelector("#parent-food");
+var DrinkSelcBtn = document.querySelector("#parent-drink");
 var drinkSelection;
 var foodSelection;
 
@@ -19,6 +23,7 @@ function foodRecipe() {
       return response.json();
     })
     .then(function (data) {
+      console.log(data);
       //Figure out loop with string concated variable to miminize code
       var rawIngredientList = [
         data.meals[0].strIngredient1,
@@ -156,6 +161,76 @@ function drinkRecipe() {
     });
 }
 
+drinkRecipe();
+//user selection for categories
+function catergories(userSelection) {
+  var urlID = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
+  fetch(urlID + userSelection)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data.meals);
+      var RecipeID =
+        data.meals[Math.floor(Math.random() * data.meals.length)].idMeal;
+      console.log(RecipeID);
+      recipeCat(RecipeID);
+    });
+}
+
+function recipeCat(ID) {
+  var urlID = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
+  fetch(urlID + ID)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data.meals[0]);
+    });
+}
+
+catergories(catSelection);
+
+//event listener for food category
+FoodCatBtn.addEventListener("Click", function (event) {
+  var foodPick = event.target;
+  foodPick = catSelection;
+});
+
+///cocktail selector
+function TypeofAlc(userDrinkSelection) {
+  var urlID = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
+  fetch(urlID + userDrinkSelection)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data.drinks);
+      var RecipeID =
+        data.drinks[Math.floor(Math.random() * data.drinks.length)].idDrink;
+      console.log(RecipeID);
+      RecipeAlc(RecipeID);
+    });
+}
+
+function RecipeAlc(ID) {
+  var urlID = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
+  fetch(urlID + ID)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data.drinks[0]);
+    });
+}
+
+TypeofAlc();
+
+// Event Listner:
+DrinkSelcBtn.addEventListener("click", function (event) {
+  var DrinkPick = event.target;
+  DrinkPick = DrinkSelection;
+});
 $("#refreshFood").on("click", function () {
   foodRecipe();
 });
