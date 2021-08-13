@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Cav3man a.k.a. Matthew Hazelwood and Brice Bridges in addition to Brock Atwood and Adrian Auchterlonie"
+    />
+    <meta
+      name="description"
+      content="This web application will generate a random recipe with a paired drink. Recipes can be saved locally and brought back up when the user re-opens the application. The goal of the application is to simplify the process of deciding a meal for those who enjoy cooking new recipes. This application will be developed for a target audience of individuals who enjoy cooking and hosting events that have trouble deciding on meals and drinks to prepare. Males and females from ages 20 to 50.
+"
+    />
+    <title>Bevies</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-black">
+    <header>
+      <nav class="navbar navbar-dark bg-black py-6">
+        <div class="container-fluid justify-content-center">
+          <h1 class="navbar-brand fw-bolder fst-italic">
+            Bevies served by
+            <a class="navbar-brand" href="../index.html"> Delishery </a>
+          </h1>
+        </div>
+        <div class="container-fluid justify-content-center"></div>
+      </nav>
+    </header>
+    <div
+      class="container-fluid bg-secondary"
+      style="height: 100vh"
+      id="main-content"
+    >
+      <div class="container bg-dark">
+        <h2 class="text-center text-light" id="drink-name">
+          Lets start with a drink!
+        </h2>
+        <h3 class="text-center text-light">It's 5 '0 clock somewhere!</h3>
+      </div>
+      <div class="container bg-secondary">
+        <div class="row justify-content-between bg-secondary d-flex">
+          <div
+            class="col-5 bg-dark text-light text-center px-1"
+            style="width: 48%; height: 35vh"
+            id="cocktail"
+          >
+            Cocktail
+          </div>
+          <div
+            class="col-5 bg-dark text-light text-center px-1"
+            style="width: 48%; height: 35vh"
+            id="special-drinks"
+          >
+            Punch/Party Drinks
+          </div>
+        </div>
+        <br />
+        <div class="row justify-content-between bg-secondary d-flex">
+          <div
+            class="col-5 bg-dark text-light text-center px-1"
+            style="width: 48%; height: 35vh"
+            id="basic-drinks"
+          >
+            Basic
+          </div>
+          <div
+            class="col-5 bg-dark text-light text-center px-1"
+            style="width: 48%; height: 35vh"
+            id="shots"
+          >
+            Shots
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="bg-black d-flex flex-row justify-content-around" style="width: 100%;"
+    >
+      <div class="card bg-dark " style="width: 22%">
+        <a
+          class="github-button link-secondary"
+          href="https://github.com/Matthew-Hazelwood"
+          data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Follow @Matthew-Hazelwood on GitHub"
+          ><h3 class="text-center">
+            <i class="fab fa-github">Follow Cav3man</i>
+          </h3></a
+        >
+
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="cav3mancomputers" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/cav3mancomputers?trk=profile-badge"></a>
+      </div>
+    </div>
+
+        <div class="card bg-dark" style="width: 22%;">
+        <a
+          class="github-button link-secondary"
+          href="https://github.com/adrianauch"
+          data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Follow @adrianauch on GitHub"
+          ><h3 class="text-center">
+            <i class="fab fa-github">Follow Adrian</i>
+          </h3></a
+        >
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="aauchterlonie" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/aauchterlonie?trk=profile-badge"></a></div>
+        </div>
+        <div class="card bg-dark" style="width: 22%;">
+        <a
+          class="github-button link-secondary"
+          href="https://github.com/BrockAtwood"
+          data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Follow @BrockAtwood on GitHub"
+          ><h3 class="text-center">
+            <i class="fab fa-github">Follow Brock</i>
+          </h3></a
+        >
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="brock-atwood-55135210" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/brock-atwood-55135210?trk=profile-badge"></a></div>
+        </div>
+        <div class="card bg-dark" style="width: 22%;">
+        <a
+          class="github-button link-secondary"
+          href="https://github.com/bcbridges"
+          data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Follow @bcbridges on GitHub"
+          ><h3 class="text-center">
+            <i class="fab fa-github">Follow Brice</i>
+          </h3></a
+        >
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="brice-bridges" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/brice-bridges?trk=profile-badge"></a></div>
+        </div>
+
+              
+            
+        </div>
+      <!-- </div> -->
+     
+    </footer>
+    <!-- The following body commands are reserved for script calls  -->
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+   
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"
+      integrity="sha512-NWNl2ZLgVBoi6lTcMsHgCQyrZVFnSmcaa3zRv0L3aoGXshwoxkGs3esa9zwQHsChGRL4aLDnJjJJeP6MjPX46Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
