@@ -236,3 +236,7 @@ $("#refreshFood").on("click", function () {
 $("#refreshDrink").on("click", function () {
   drinkRecipe();
 });
+
+$("#printBtn").click(function () {
+  window.print();
+});
