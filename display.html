@@ -4,29 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"
+      integrity="sha512-NWNl2ZLgVBoi6lTcMsHgCQyrZVFnSmcaa3zRv0L3aoGXshwoxkGs3esa9zwQHsChGRL4aLDnJjJJeP6MjPX46Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./Assets/CSS/style.css" />
     <title>Delishery B&B</title>
   </head>
   <body onload="foodRecipe(); drinkRecipe();">
+    <!-- Not used for content, used to please the JS Gods-->
+    <p id="parent-drinks"></p>
     <!-- Contains all elements to display for the food -->
-    <div class="questionArea">
-      <a href="./index.html"
-        ><img
-          src="file:///C:/Users/bcb35/Downloads/logoipsum-logo-13.svg"
-          alt="Delishery Logo"
-      /></a>
-      <header>Bite</header>
+    <div class="container col-lg-6">
+      <div class="questionArea">
+        <a href="./index.html"
+          ><img
+            src="file:///C:/Users/bcb35/Downloads/logoipsum-logo-13.svg"
+            alt="Delishery Logo"
+        /></a>
+        <header>Bite</header>
+      </div>
+
+      <section id="biteSection">
+        <h5>Food Reciple Name</h5>
+        <h6>Ingredients</h6>
+        <ul></ul>
+        <h6>Directions</h6>
+        <p></p>
+      </section>
     </div>
-
-    <section id="biteSection">
-      <h5>Food Reciple Name</h5>
-      <h6>Ingredients</h6>
-      <ul></ul>
-      <h6>Directions</h6>
-      <p></p>
-      <button id="refreshFood">Bring me something else</button>
-    </section>
-
     <!-- Contains all elements to display for the beverage -->
     <div class="questionArea">
       <a href="./index.html"
@@ -42,8 +50,9 @@
       <ul></ul>
       <h6>Directions</h6>
       <p></p>
-      <button id="refreshDrink">Bring me something else</button>
     </section>
+
+    <a href="./index.html"><button>Start Over</button></a>
 
     <!-- jQuery script path-->
     <script
@@ -53,6 +62,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <!-- Custom JS file. -->
-    <script src="./script.js"></script>
+    <script src="./JS/script.js"></script>
   </body>
 </html>

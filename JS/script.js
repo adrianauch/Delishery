@@ -7,13 +7,20 @@ var parsedDrinkQuantity = [];
 var catSelection = {};
 var DrinkSelection = {};
 var FoodCatBtn = document.querySelector("#parent-food");
-var DrinkSelcBtn = document.querySelector("#parent-drink");
+var DrinkSelcBtn = document.querySelector("#parent-drinks");
 var drinkSelection;
 var foodSelection;
 
 //API Fetch URLs
 var drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
-var foodURL = "https://www.themealdb.com/api/json/v1/1/random.php?c=Seafood";
+var foodURL = "https://www.themealdb.com/api/json/v1/1/random.php";
+
+drinkURL = JSON.parse(localStorage.getItem("savedDrinkURL"));
+foodURL = JSON.parse(localStorage.getItem("savedFoodURL"));
+if (drinkURL === null) {
+  drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+  foodURL = "https://www.themealdb.com/api/json/v1/1/random.php";
+}
 
 // This fn sets food ingredients into an array (cleaner that the object's setup), parses out nulls, and console logs the ingredients with quantity.
 // Once html is finished, ingredients will be appended to doc instead of console logging.
@@ -161,7 +168,6 @@ function drinkRecipe() {
     });
 }
 
-drinkRecipe();
 //user selection for categories
 function catergories(userSelection) {
   var urlID = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
@@ -179,23 +185,10 @@ function catergories(userSelection) {
 }
 
 function recipeCat(ID) {
-  var urlID = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
-  fetch(urlID + ID)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data.meals[0]);
-    });
+  var foodURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + ID;
+  localStorage.setItem("savedFoodURL", JSON.stringify(foodURL));
+  location.href = "./display.html";
 }
-
-catergories(catSelection);
-
-//event listener for food category
-FoodCatBtn.addEventListener("Click", function (event) {
-  var foodPick = event.target;
-  foodPick = catSelection;
-});
 
 ///cocktail selector
 function TypeofAlc(userDrinkSelection) {
@@ -210,27 +203,32 @@ function TypeofAlc(userDrinkSelection) {
         data.drinks[Math.floor(Math.random() * data.drinks.length)].idDrink;
       console.log(RecipeID);
       RecipeAlc(RecipeID);
-    });
+    })
+    .catch(Error);
 }
 
 function RecipeAlc(ID) {
-  var urlID = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
-  fetch(urlID + ID)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data.drinks[0]);
-    });
+  var drinkURL =
+    "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + ID;
+  localStorage.setItem("savedDrinkURL", JSON.stringify(drinkURL));
 }
-
-TypeofAlc();
 
 // Event Listner:
 DrinkSelcBtn.addEventListener("click", function (event) {
-  var DrinkPick = event.target;
-  DrinkPick = DrinkSelection;
+  TypeofAlc(event.target.value);
+
+  $("#parent-drinks").attr("id", "parent-food");
+  $("#Vodka").val("Chicken").text("Chicken");
+  $("#Gin").val("Beef").text("Beef");
+  $("#Whiskey").val("Pasta").text("Pasta");
+  $("#Tequila").val("Pork").text("Pork");
+  $("#Champagne").val("Vegetarian").text("Vegetarian");
+
+  $("#parent-food").click(function () {
+    catergories(event.target.value);
+  });
 });
+
 $("#refreshFood").on("click", function () {
   foodRecipe();
 });
