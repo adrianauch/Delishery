@@ -6,27 +6,29 @@ This project was developed to aide anyone who loves to cook and create their own
 
 ### index.html
 
+- This project is composed of 3 html files. The homepage leads to the questions page. The questions page is "recycled" to append new questions without loading a new page. Once both questions are answered, then the user is redirected to the display page which holds the randomized recipes.
+
 ### style.css
+
+- Bootstrap was used across all 3 html files. In addition to the bootstrap classes, custom CSS was added within all files where needed.
 
 ### script.js
 
 - The JavaScript in this project utilized jQuery to minimize the amount of code required.
-- This project made use of two API: Add links to APIs
+- This project made use of two API: [TheCocktailDB](https://www.thecocktaildb.com/api.php) & [TheMealDB](https://www.themealdb.com/api.php)
 
 ## Installation and Access
 
-There is no required software installation necessary to access the code or GitHub published webpage. To access the webpage, either click the 'Delishery' link at the top of this readme or go to this link https://adrianauch.github.io/Delishery/. If accessing manually through the repository, click on the 'github-pages' link under the environments. From here, you can click on the version history of the website that you would like to see - Image 1.
+There is no required software installation necessary to access the code or GitHub published webpage. To access the webpage, either click the 'Delishery' link at the top of this readme or go to this link https://adrianauch.github.io/Delishery/. If accessing manually through the repository, click on the 'github-pages' link under the environments. From here, you can click on the version history of the website that you would like to see - Image 1. To go directly to the deployed application, please click [here](https://adrianauch.github.io/Delishery/).
 
 ### Image 1
 
 Insert Images or Gif of Product here
 
-The index.html can be accessed [here](index.html), the style.css [here](./assets/style.css), and the script.js [here](./assets/script.js).
+The index.html can be accessed [here](index.html), the style.css [here](./Assets/CSS/style.css), and the script.js [here](./JS/script.js).
 Finalize these links - GitHub style and scripts should be moved into an assets folder
 
-## Collaborators
-
-Add table with collaborators into this section
+## Project Team
 
 ## License
 
