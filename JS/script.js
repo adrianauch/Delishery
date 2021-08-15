@@ -86,7 +86,7 @@ function foodRecipe() {
       for (var i = 0; i < parsedIngredientList.length; i++) {
         var ingredientList = $("#biteSection").find("ul");
         var ingredientItem = $("<li></li>").text(
-          parsedIngredientList[i] + " ------- " + parsedIngredientQuantity[i]
+          parsedIngredientQuantity[i] + " " + parsedIngredientList[i]
         );
         ingredientList.append(ingredientItem);
       }
@@ -159,7 +159,7 @@ function drinkRecipe() {
       for (var i = 0; i < parsedDrinkList.length; i++) {
         var ingredientList = $("#bevieSection").find("ul");
         var ingredientItem = $("<li></li>").text(
-          parsedDrinkList[i] + " ------- " + parsedDrinkQuantity[i]
+          parsedDrinkQuantity[i] + " " + parsedDrinkList[i]
         );
         ingredientList.append(ingredientItem);
       }
