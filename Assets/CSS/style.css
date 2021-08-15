@@ -38,6 +38,12 @@
   justify-content: space-evenly;
 }
 
+#parent-food {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
 .footer {
   background-color: #586978;
   color: var(--accentgrey);
