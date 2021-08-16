@@ -14,7 +14,7 @@
   background-color: var(--oldLavendar);
   border-radius: 50%;
   outline: none;
-  margin: 30px;
+  margin: 60px;
 }
 
 .questionArea {
@@ -160,4 +160,28 @@ ul {
   font-family: "Quicksand", sans-serif;
   color: var(--accentgrey);
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 375px) {
+  .roundedBtn {
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 675px) {
+  .roundedBtn {
+    margin: 30px;
+  }
+}
+
+@media screen and (min-width: 925px) {
+  .roundedBtn {
+    margin: 40px;
+  }
+}
+
+@media screen and (min-width: 1175px) {
+  .roundedBtn {
+    margin: 50px;
+  }
 }
