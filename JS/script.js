@@ -80,6 +80,7 @@ function foodRecipe() {
       ];
       parsedIngredientQuantity = rawIngredientQuantity.filter((e) => e);
       // If user clicks refresh button, will remove the previous recipe's ingredients
+      console.log(data.meals[0]);
       $("#biteSection").find("li").remove();
 
       $("#biteSection").find("h5").text(data.meals[0].strMeal);
@@ -91,7 +92,13 @@ function foodRecipe() {
         ingredientList.append(ingredientItem);
       }
       $("#biteSection").find("p").text(data.meals[0].strInstructions);
-      console.log(data.meals[0].strCategory);
+      $("#biteSection")
+        .find("img")
+        .attr("src", data.meals[0].strMealThumb)
+        .attr(
+          "style",
+          "width: 30vw; border: 5px solid var(--primaryblue); display: block; margin: 2vh auto"
+        );
     });
 }
 
@@ -164,7 +171,13 @@ function drinkRecipe() {
         ingredientList.append(ingredientItem);
       }
       $("#bevieSection").find("p").text(data.drinks[0].strInstructions);
-      console.log(data.drinks[0].strCategory);
+      $("#bevieSection")
+        .find("img")
+        .attr("src", data.drinks[0].strDrinkThumb)
+        .attr(
+          "style",
+          "width: 30vw; border: 5px solid var(--primaryblue); display: block; margin: 2vh auto"
+        );
     });
 }
 
@@ -186,6 +199,7 @@ function catergories(userSelection) {
 
 function recipeCat(ID) {
   var foodURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + ID;
+  console.log(foodURL);
   localStorage.setItem("savedFoodURL", JSON.stringify(foodURL));
   location.href = "./display.html";
 }
@@ -219,11 +233,11 @@ DrinkSelcBtn.addEventListener("click", function (event) {
 
   $("#parent-drinks").attr("id", "parent-food");
   $(".sub-cat").text("What type of food would you like?");
-  $("#Vodka").val("Chicken").text("Chicken");
-  $("#Gin").val("Beef").text("Beef");
-  $("#Whiskey").val("Pasta").text("Pasta");
-  $("#Tequila").val("Pork").text("Pork");
-  $("#Champagne").val("Vegetarian").text("Vegetarian");
+  $("#Vodka").val("Chicken").attr("id", "Chicken").text("Chicken");
+  $("#Gin").val("Beef").attr("id", "Beef").text("Beef");
+  $("#Whiskey").val("Pasta").attr("id", "Pasta").text("Pasta");
+  $("#Tequila").val("Pork").attr("id", "Pork").text("Pork");
+  $("#Champagne").val("Vegetarian").attr("id", "Vegetarian").text("Vegetarian");
 
   $("#parent-food").click(function () {
     catergories(event.target.value);
