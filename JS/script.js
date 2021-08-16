@@ -80,6 +80,7 @@ function foodRecipe() {
       ];
       parsedIngredientQuantity = rawIngredientQuantity.filter((e) => e);
       // If user clicks refresh button, will remove the previous recipe's ingredients
+      console.log(data.meals[0]);
       $("#biteSection").find("li").remove();
 
       $("#biteSection").find("h5").text(data.meals[0].strMeal);
@@ -91,7 +92,13 @@ function foodRecipe() {
         ingredientList.append(ingredientItem);
       }
       $("#biteSection").find("p").text(data.meals[0].strInstructions);
-      console.log(data.meals[0].strCategory);
+      $("#biteSection")
+        .find("img")
+        .attr("src", data.meals[0].strMealThumb)
+        .attr(
+          "style",
+          "width: 30vw; border: 5px solid black; display: block; margin: 2vh auto"
+        );
     });
 }
 
@@ -164,7 +171,13 @@ function drinkRecipe() {
         ingredientList.append(ingredientItem);
       }
       $("#bevieSection").find("p").text(data.drinks[0].strInstructions);
-      console.log(data.drinks[0].strCategory);
+      $("#bevieSection")
+        .find("img")
+        .attr("src", data.drinks[0].strDrinkThumb)
+        .attr(
+          "style",
+          "width: 30vw; border: 5px solid black; display: block; margin: 2vh auto"
+        );
     });
 }
 
