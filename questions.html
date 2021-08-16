@@ -4,43 +4,59 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- googlefonts link -->
+    <!-- Sandstone -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<!-- Quicksand -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Sacramento&display=swap" rel="stylesheet">
     <link href="./Assets/CSS/style.css" rel="stylesheet" />
     <title>Delishery B&B</title>
   </head>
   <body>
+    <Header>
+      <section class="header">
+        <div>
+          <h1 class="title">Delishery</h1>
+          <h2 class="sub-title" ><span>Bevies & Bites</span></h2> 
+        </div>
+    </Header>
     <!-- anchor element will be logo link back to home page. Can change this  -->
     <div class="questionArea">
-      <a href="./index.html"
+      <!-- <a href="./index.html"
         ><img
           src="file:///C:/Users/bcb35/Downloads/logoipsum-logo-13.svg"
           alt="Delishery Logo"
-      /></a>
+      /></a> -->
       <!-- This header will cycle between "Let's start with some drinks" and "What will you be cooking for?" or something similar to prompt-->
-      <header>Let's start with some drinks</header>
+      <h1 class="sub-cat" >Let's start with some drinks!</h1>
     </div>
 
     <!-- These buttons will set variables to be entered into the API URLs-->
     <div class="buttonarea">
       <ul id="parent-drinks">
         <li>
-          <button value="Vodka" id="Vodka" class="roundedBtn">Vodka</button>
+          <button value="Vodka" id="Vodka" class="roundedBtn btnstyle">Vodka</button>
         </li>
-        <li><button value="Gin" id="Gin" class="roundedBtn">Gin</button></li>
+        <li><button value="Gin" id="Gin" class="roundedBtn btnstyle">Gin</button></li>
         <li>
-          <button value="Whiskey" id="Whiskey" class="roundedBtn">Whiskey</button>
-        </li>
-        <li>
-          <button value="Tequila" id="Tequila" class="roundedBtn">Tequila</button>
+          <button value="Whiskey" id="Whiskey" class="roundedBtn btnstyle">Whiskey</button>
         </li>
         <li>
-          <button value="Champagne" id="Champagne" class="roundedBtn">
+          <button value="Tequila" id="Tequila" class="roundedBtn btnstyle">Tequila</button>
+        </li>
+        <li>
+          <button value="Champagne" id="Champagne" class="roundedBtn btnstyle">
           Champagne
           </button>
         </li>
       </ul>
     </div>
 
-  <footer class="footer"
+  <footer class="footer">
     <p> 
          <div> <a href="https://github.com/adrianauch" target="no_blank"> <img src="./Assets/Images/GitHub Logo.png" alt="Github Link" class="img"></a> Adrian <a href="https://www.linkedin.com/in/aauchterlonie/" target="no_blank"> <img src="./Assets/Images/LinkedIn Logo.png" alt="LinkedIn" class="img"></a></div>
 

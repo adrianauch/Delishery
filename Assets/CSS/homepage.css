@@ -36,7 +36,7 @@
   font-family: 'Sacramento', cursive;
   color: whitesmoke;
   text-align: center;
-  text-shadow: 2px 2px var(--accentgrey);
+  text-shadow: 2px 2px var(--primarypurp);
 }
 
 .sub-title {
@@ -61,7 +61,7 @@
   border-bottom: 1px solid var(--accentgrey);
   border-top: 1px solid var(--accentgrey);
   top: 0;
-  width: 100vw;
+  width: 90%;
 }
 .sub-title span:before {
   right: 100%;

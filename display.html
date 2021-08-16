@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"
-      integrity="sha512-NWNl2ZLgVBoi6lTcMsHgCQyrZVFnSmcaa3zRv0L3aoGXshwoxkGs3esa9zwQHsChGRL4aLDnJjJJeP6MjPX46Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+<!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- google fonts -->
+    <!-- Sandstone -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<!-- Quicksand -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Assets/CSS/style.css" />
     <title>Delishery B&B</title>
   </head>
@@ -17,45 +22,51 @@
     <!-- Not used for content, used to please the JS Gods-->
     <p id="parent-drinks"></p>
     <!-- Contains all elements to display for the food -->
-    <div class="container col-lg-6">
+    <div class=" background">
+      <Header>
+        <section class="header">
+          <div>
+            <h1 class="title">Delishery</h1>
+            <h2 class="sub-title" ><span>Bevies & Bites</span></h2> 
+          </div>
+      </Header>
       <div class="questionArea">
-        <a href="./index.html"
+        <!-- <a href="./index.html"
           ><img
             src="file:///C:/Users/bcb35/Downloads/logoipsum-logo-13.svg"
             alt="Delishery Logo"
-        /></a>
-        <header>Bite</header>
+        /></a> -->
+
+        <header class="sub-cat">Bite <i class="fas fa-utensils"></i></header>
       </div>
 
       <section id="biteSection">
-        <h5>Food Reciple Name</h5>
-        <h6>Ingredients</h6>
-        <ul></ul>
-        <h6>Directions</h6>
-        <p></p>
-        <img src="" alt="Food Image" />
+        <h5 class="content">Food Reciple Name</h5>
+        <h6 class="content1">Ingredients</h6>
+        <ul class="ingr"></ul>
+        <h6 class="content1">Directions</h6>
+        <p class="instr"></p>
       </section>
     </div>
     <!-- Contains all elements to display for the beverage -->
-    <div class="questionArea">
-      <a href="./index.html"
+    <div class="questionArea background">
+      <!-- <a href="./index.html"
         ><img
           src="file:///C:/Users/bcb35/Downloads/logoipsum-logo-13.svg"
           alt="Delishery Logo"
-      /></a>
-      <header>Bevie</header>
+      /></a> -->
+      <header class="sub-cat">Bevie <i class="fas fa-cocktail"></i></header>
     </div>
     <section id="bevieSection">
-      <h5>Drink Reciple Name</h5>
-      <h6>Ingredients</h6>
-      <ul></ul>
-      <h6>Directions</h6>
-      <p></p>
-      <img src="" alt="Drink Image" />
+      <h5 class="content">Drink Reciple Name</h5>
+      <h6 class="content1">Ingredients</h6>
+      <ul class="ingr"></ul>
+      <h6 class="content1">Directions</h6>
+      <p class="instr"></p>
     </section>
 
-    <a href="./index.html"><button style="font: 2vw">Start Over</button></a>
-    <button id="printBtn">Love it? Print it here</button>
+    <a href="./index.html"><button class="btn btn-secondary">Start Over</button></a>
+    <button id="printBtn" class="btn btn-secondary">Love it? Print it here</button>
 
     <!-- jQuery script path-->
     <script
@@ -64,7 +75,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- bootstrap -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"
+    integrity="sha512-NWNl2ZLgVBoi6lTcMsHgCQyrZVFnSmcaa3zRv0L3aoGXshwoxkGs3esa9zwQHsChGRL4aLDnJjJJeP6MjPX46Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
     <!-- Custom JS file. -->
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/1eb4550aa4.js" crossorigin="anonymous"></script>
     <script src="./JS/script.js"></script>
   </body>
 </html>
