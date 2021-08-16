@@ -218,7 +218,7 @@ DrinkSelcBtn.addEventListener("click", function (event) {
   TypeofAlc(event.target.value);
 
   $("#parent-drinks").attr("id", "parent-food");
-  $("header").text("What type of food would you like?");
+  $(".sub-cat").text("What type of food would you like?");
   $("#Vodka").val("Chicken").text("Chicken");
   $("#Gin").val("Beef").text("Beef");
   $("#Whiskey").val("Pasta").text("Pasta");
